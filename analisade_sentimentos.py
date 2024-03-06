@@ -1,11 +1,12 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+import openai
 
 load_dotenv()
 
-cliente = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-modelo = "gpt-3.5-turbo-1106"
+cliente = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) # "ALURA" para dar erro de Autenticação
+modelo = "gpt-3.5-turbo-1106" #Modelo gpt-3.5-turbo-1106-alura para dar um erro de API
 
 def carrega(nome_do_arquivo):
     try:
@@ -52,12 +53,20 @@ def analisador_sentimentos(produto):
         }
     ]	
 
-    resposta = cliente.chat.completions.create(
-        messages=lista_mensagens,
-        model=modelo,
-    )
+    try:
+        resposta = cliente.chat.completions.create(
+            messages=lista_mensagens,
+            model=modelo
+        )
 
-    texto_resposta = resposta.choices[0].message.content
-    salva(f"dados/analise-{produto}.txt", texto_resposta)
+        texto_resposta = resposta.choices[0].message.content
+        salva(f"dados/analise-{produto}.txt", texto_resposta)
+    except openai.AuthenticationError as e:
+        print(f"Erro de Autenticação: {e}")
+    except openai.APIError as e:
+        print(f"Erro de API: {e}")
 
-analisador_sentimentos("Maquiagem mineral")	
+
+lista_de_produtos = ["Camisetas de algodão orgânico", "Maquiagem mineral", "Jeans feitos com materiais reciclados"]
+for produto in lista_de_produtos:
+    analisador_sentimentos(produto)	
