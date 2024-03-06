@@ -153,3 +153,7 @@ for uma_transacao in transacoes_analisadas["transacoes"]:
         produto_transacao = uma_transacao["nome_produto"]
         status_transacao = uma_transacao["status"]
         salva(f"trasacao-{id_transacao}-{produto_transacao}-{status_transacao}.txt", recomendacao)
+
+
+
+#Foi bom demais realizar esse curso e aprender com a Alura!
