@@ -13,7 +13,7 @@ resposta = cliente.chat.completions.create(
         },
         {
             "role" : "user",
-            "content" : "Liste 3 produtos sustentáveis"
+            "content" : "Liste 3 produtos de leitura"
         }
     ],
     model="gpt-3.5-turbo-1106"
