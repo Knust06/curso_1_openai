@@ -24,14 +24,14 @@ def categoriza_produto(nome_produto, lista_categorias_possíveis):
 
     """
 
-    resposta = cliente.chat.completions.create( #Criação de uma conversa
+    resposta = cliente.chat.completions.create( 
         messages=[
             {
-                "role":"system", #Quem está falando
+                "role":"system", 
                 "content" : prompt_sistema
             },
             {
-                "role" : "user", #Quem está falando
+                "role" : "user", #
                 "content" : nome_produto
             }
         ],
