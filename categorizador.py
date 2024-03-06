@@ -31,7 +31,7 @@ def categoriza_produto(nome_produto, lista_categorias_possíveis):
                 "content" : prompt_sistema
             },
             {
-                "role" : "user", #
+                "role" : "user", 
                 "content" : nome_produto
             }
         ],
