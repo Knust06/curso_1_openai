@@ -1,3 +1,5 @@
-Recomendação: Acionar setor Anti-Fraude.
+Recomendação: Acionar setor Anti-Fraude
 
-Classificação do tipo de fraude: Fraude de Valor Elevado.
+Detalhamento: Devido ao valor extremamente alto e incomum para um artigo esportivo, a transação levanta suspeitas de fraude e, portanto, é recomendável acionar o setor Anti-Fraude para uma investigação mais aprofundada. O setor Anti-Fraude deve verificar a autenticidade da transação e tomar as medidas necessárias para mitigar qualquer possível fraude.
+
+Classificação do tipo de fraude: Fraude de alto valor e incomum para o tipo de produto.

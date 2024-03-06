@@ -120,7 +120,7 @@ def gera_recomendacao(parecer):
     Para a seguinte transação, forneça uma recomendação apropriada baseada no status e nos detalhes da transação da Transação: {parecer}
 
     As recomendações podem ser "Notificar Cliente", "Acionar setor Anti-Fraude" ou "Realizar Verificação Manual".
-    Elas devem ser escritas no formato técnico.
+    Detalhar a recomendação no formato técnico.
 
     Inclua também uma classificação do tipo de fraude, se aplicável. 
     """
